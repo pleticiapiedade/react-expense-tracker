@@ -7,7 +7,14 @@ const App = () => {
         <C.HTitle>Expense Tracker</C.HTitle>
       </C.Header>
       <C.Body>
-        ...
+        
+        {/*Area de Informacoes*/}
+
+        {/*Area de inserir Informacoes*/}
+
+        {/*Tabela de items*/}
+
+
       </C.Body>
 
     </C.Container>
