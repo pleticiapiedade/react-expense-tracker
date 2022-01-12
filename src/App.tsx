@@ -11,11 +11,18 @@ import { InfoArea } from './components/InfoArea/index';
 const App = () => {
   const[list, setList] = useState(items);
   const [filteredList, setFilteredList] = useState<Item[]>([]);
-  const[currentMonth, setCurrentMonth] = useState(getCurrentMonth());
+  const [currentMonth, setCurrentMonth] = useState(getCurrentMonth());
+
 
   useEffect(() => {
     setFilteredList( filterListByMonth(list, currentMonth) );
   }, [list, currentMonth]);
+
+
+  const handleMonthChange = (newMonth: string) => {
+    setCurrentMonth(newMonth);
+  }
+
 
 
   return(
@@ -25,7 +32,6 @@ const App = () => {
       </C.Header>
       <C.Body>
         
-        <InfoArea currentMonth={currentMonth}/>
 
         {/*Area de inserir Informacoes*/}
 
